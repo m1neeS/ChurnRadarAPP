@@ -26,8 +26,14 @@ st.set_page_config(
 @st.cache_resource
 def load_model():
     """Load trained model dan scaler"""
-    model = joblib.load('../models/churn_model.pkl')
-    scaler = joblib.load('../models/scaler.pkl')
+    import os
+    
+    # Get the directory where app.py is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    models_dir = os.path.join(current_dir, '..', 'models')
+    
+    model = joblib.load(os.path.join(models_dir, 'churn_model.pkl'))
+    scaler = joblib.load(os.path.join(models_dir, 'scaler.pkl'))
     return model, scaler
 
 try:
