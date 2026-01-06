@@ -1,0 +1,41 @@
+
+============================================================
+MODEL EVALUATION SUMMARY
+============================================================
+
+MODEL INFORMATION:
+- Model Type: RandomForestClassifier
+- Test Set Size: 1409 samples
+- Features: 35
+
+PERFORMANCE METRICS:
+- Accuracy:  0.7566 (75.66%)
+- Precision: 0.5290 (52.90%)
+- Recall:    0.7567 (75.67%)
+- F1-Score:  0.6227 (62.27%)
+- ROC-AUC:   0.8381 (83.81%)
+
+CONFUSION MATRIX:
+- True Negatives:  783
+- False Positives: 252
+- False Negatives: 91
+- True Positives:  283
+
+BUSINESS IMPACT (at 70% threshold):
+- Customers targeted: 288
+- Expected retained:  56
+- Net benefit:        $27,600.00
+- ROI:                95.83%
+
+KEY INSIGHTS:
+1. Model dapat predict churn dengan ROC-AUC 0.8381
+2. Dari 374 actual churners, model menangkap 283 (75.7%)
+3. Dari 535 predicted churners, 283 benar (52.9%)
+4. Expected ROI dari retention effort: 95.8%
+
+RECOMMENDATIONS:
+- Focus retention pada customers dengan churn probability > 70%
+- Monitor false negatives untuk improve recall
+- Consider adjusting threshold berdasarkan business goals
+
+============================================================
